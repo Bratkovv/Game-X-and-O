@@ -1,0 +1,237 @@
+*{padding: 0; margin: 0; }
+
+.wraper {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url(xo.jpg);
+    background-repeat: repeat-y;
+    color: #16169b;
+    font-family: 'Indie Flower', cursive; 
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.hover:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+                                        /* GameMod */
+
+#gameMod {
+    display: block;
+    text-align: center;
+    padding: 80px;
+}
+#gameMod div {
+    padding: 38px;
+}
+
+#pvsp {
+    padding: 41px;
+}
+
+#pvsc {
+    padding-top: 14px;
+}
+
+#cvsc {
+    padding-top: 18px;
+}
+
+                                        /* PlayerName */   
+
+#playerName {
+    display: none;
+    margin: 0 auto;
+    padding: 50px;
+    
+}
+#playerName input[type=button] {
+    color: #16169b;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    margin: 20px;
+    margin-left: 138px;
+    outline: none;
+}
+#playerName input[type=button]:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+#playerName input[type=text] {
+    color: #16169b;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-bottom: 2px solid #16169b;
+    height: 23px;
+    outline:none;
+}
+
+#playerName label{
+    display: block;
+    margin: 36px 0 0 26px;
+}
+
+#nameComp {
+    margin-left: 90px;
+}
+
+#addClass {
+        width: 188px;
+}
+
+
+                                        /* GAME */
+
+#gameXO {
+    display: none;
+    cursor: crosshair;
+}
+
+h1{
+    padding: 5px 0 0 82px;
+}
+
+h3{
+    display: inline-block;
+    width: 70px;
+    font-size: 55px;
+}
+
+
+
+.scoreTab{
+    width: 400px;
+    margin: 0 60px 0 57px;
+}
+
+.scoreTab span {
+    display: block;
+}
+
+#player1 {
+    width: 151px;
+    display: inline-block;
+}
+
+#player2 {
+    width: 151px;
+    display: inline-block;
+}
+
+#name1 {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+#XO1 {
+    display: inline-block;
+}
+
+#XO2 {
+    display: inline-block;
+}
+
+#score1 {
+    display: block;
+    margin: 0 0 0 73px;
+    font-size: 75px;
+}
+
+#name2 {
+    display:  inline-block;
+}
+#score2 {
+    margin: 0 0 0 18px;
+    font-size: 75px;
+    display: inline-block;
+}
+
+                                            /* Game Zone */
+
+.gameZone{
+    width: 276px;
+    margin: -3px 0 0 120px;
+    font-size: 0;
+    
+    
+}
+
+.gameZone div {
+    width: 85px;
+    height: 89px;
+    display: inline-block;
+    font-size: 0;
+/*    background-color: rgba(0, 0, 0, 0.34);*/
+}
+
+.gameZone div:hover{
+    background-color: rgba(22, 22, 155, 0.20);
+    cursor: crosshair;
+}
+
+#cell1 {
+        border-bottom: 3px solid;
+}
+
+#cell2 {
+        border-bottom: 3px solid;
+    border-left: 3px solid;
+    margin-left: -3px;
+
+}
+
+#cell3 {
+        border-bottom: 3px solid;
+    border-left: 3px solid;
+}
+
+#cell4 {
+        border-bottom: 3px solid;
+}
+
+#cell5 {
+        border-bottom: 3px solid;
+    border-left: 3px solid;
+    margin-left: -3px;
+
+}
+
+#cell6 {
+        border-bottom: 3px solid;
+    border-left: 3px solid;
+}
+
+#cell7 {
+    
+}
+
+#cell8 {
+    border-left: 3px solid;
+    margin-left: -3px;
+
+}
+
+#cell9 {
+    border-left: 3px solid;
+}
+
+.errorInline {
+    font-size: 0px;
+    line-height: 92px;
+    text-align: center;
+    width: 85px;
+    height: 92px;
+    display: table;
+
+}
+.errorInline:hover{
+    font-size: 90px;
+}
