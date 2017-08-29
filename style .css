@@ -151,7 +151,7 @@ h3{
 #score2 {
     margin: 0 0 0 18px;
     font-size: 75px;
-    display: inline-block;
+    display: block;
 }
 
                                             /* Game Zone */
