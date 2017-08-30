@@ -76,7 +76,8 @@ play.onclick = function () {
             }
             
             var gameZone = document.getElementsByClassName('gameZone')[0],
-                ocher = 1; 
+                ocher = 1,
+                root; 
             
             gameZone.onclick = function(event) {
                 var target = event.target; 
@@ -84,18 +85,24 @@ play.onclick = function () {
             };
             
             function addCellxo(TAR) {
-                
-                switch (ocher){
-                    case 1:;  
-                    case 3:;  
-                    case 5:;  
-                    case 7:;  
-                    case 9: TAR.innerHTML = "X"; ocher++; break;  
-                    case 2:;  
-                    case 4:;  
-                    case 6:;  
-                    case 8: TAR.innerHTML = "O"; ocher++; break; 
-                }
+                    
+                    if(TAR.innerHTML == "X" || TAR.innerHTML == "O"){
+                            
+                    }else {
+                            switch (ocher){
+                            case 1:;  
+                            case 3:;  
+                            case 5:;  
+                            case 7:;  
+                            case 9: TAR.innerHTML = "X"; ocher++; break;  
+                            case 2:;  
+                            case 4:;  
+                            case 6:;  
+                            case 8: TAR.innerHTML = "O"; ocher++; break;
+                            default: alert(ocher + "Error404");
+                        }
+                    }
+               
             }
     
         }break;
