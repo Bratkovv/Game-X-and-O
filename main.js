@@ -76,7 +76,11 @@ play.onclick = function () {
             }
             
             var gameZone = document.getElementsByClassName('gameZone')[0],
+                errorInline = document.getElementsByClassName('errorInline'),
                 ocher = 1,
+                winLoss = [],
+                winlossProver = [],
+                i,
                 root; 
             
             gameZone.onclick = function(event) {
@@ -85,24 +89,32 @@ play.onclick = function () {
             };
             
             function addCellxo(TAR) {
-                    
-                    if(TAR.innerHTML == "X" || TAR.innerHTML == "O"){
-                            
-                    }else {
-                            switch (ocher){
-                            case 1:;  
-                            case 3:;  
-                            case 5:;  
-                            case 7:;  
-                            case 9: TAR.innerHTML = "X"; ocher++; break;  
-                            case 2:;  
-                            case 4:;  
-                            case 6:;  
-                            case 8: TAR.innerHTML = "O"; ocher++; break;
-                            default: alert(ocher + "Error404");
-                        }
-                    }
-               
+            // выполнять только в том случае если значения winLoss не будет равнятся true        
+                if(TAR.innerHTML != "X" && TAR.innerHTML != "O"){
+                       switch (ocher){
+                        case 1:;  
+                        case 3:;  
+                        case 5:;  
+                        case 7:;  
+                        case 9: TAR.innerHTML = "X"; ocher++; break;  
+                        case 2:;  
+                        case 4:;  
+                        case 6:;  
+                        case 8: TAR.innerHTML = "O"; ocher++; break;
+                        default: alert(ocher + "Error404");
+                    }  
+                }
+                
+                
+//                for(var i=1; i < 10; i++){
+//                    winLoss[i] = errorInline[i].innerHTML;
+//                }
+//                
+//                for(var j = 0; j < 8; j++){
+//                    for(i; i < 3; i++){
+//                        winlossProver[j] += winLoss[i];
+//                    }
+//                }
             }
     
         }break;
