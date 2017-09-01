@@ -94,6 +94,7 @@
 #gameXO {
     display: none;
     cursor: crosshair;
+    height: 500px;
 }
 
 h1{
@@ -159,23 +160,27 @@ h3{
 
                                             /* Game Zone */
 
-.gameZone{
-    width: 276px;
+#gameZone{
+    width: 259px;
     margin: -3px 0 0 120px;
-    font-size: 0;
+/*    font-size: 0;*/
     
     
 }
 
-.gameZone div {
+
+#gameZone div {
     width: 85px;
     height: 89px;
-    display: inline-block;
-    font-size: 0;
+    display:block;
+    float: left;
+/*    font-size: 0;*/
 /*    background-color: rgba(0, 0, 0, 0.34);*/
 }
 
-.gameZone div:hover{
+
+
+#gameZone div:hover{
     background-color: rgba(22, 22, 155, 0.20);
     cursor: crosshair;
 }

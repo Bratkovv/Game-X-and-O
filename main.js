@@ -61,7 +61,8 @@ play.onclick = function () {
                 d = document.getElementById('nameP13').value,
                 name1 = document.getElementById('name1'),
                 name2 = document.getElementById('name2'),
-                continueGame;
+                jj = 1;
+                
             
             if(c == ""){
                  name1.innerHTML = "Player1";
@@ -75,47 +76,135 @@ play.onclick = function () {
                 name2.innerHTML = "" + d;
             }
             
-            var gameZone = document.getElementsByClassName('gameZone')[0],
-                errorInline = document.getElementsByClassName('errorInline'),
-                ocher = 1,
-                winLoss = [],
-                winlossProver = [],
-                i,
-                root; 
-            
-            gameZone.onclick = function(event) {
-                var target = event.target; 
-                addCellxo(target);
-            };
-            
-            function addCellxo(TAR) {
-            // выполнять только в том случае если значения winLoss не будет равнятся true        
-                if(TAR.innerHTML != "X" && TAR.innerHTML != "O"){
-                       switch (ocher){
-                        case 1:;  
-                        case 3:;  
-                        case 5:;  
-                        case 7:;  
-                        case 9: TAR.innerHTML = "X"; ocher++; break;  
-                        case 2:;  
-                        case 4:;  
-                        case 6:;  
-                        case 8: TAR.innerHTML = "O"; ocher++; break;
-                        default: alert(ocher + "Error404");
-                    }  
-                }
-                
-                
-//                for(var i=1; i < 10; i++){
-//                    winLoss[i] = errorInline[i].innerHTML;
-//                }
-//                
-//                for(var j = 0; j < 8; j++){
-//                    for(i; i < 3; i++){
-//                        winlossProver[j] += winLoss[i];
-//                    }
-//                }
+            var arr = [[],[],[]],
+                arr2 = [[],[],[]],
+                swt = 1,
+                gam = 0,
+                a = document.getElementById('gameZone');
+
+
+
+
+            a.onclick = function(event){
+                var id = event.target.id,
+                    xoro;
+
+                    if(arr2[+id[4]-1] != 1){
+
+                        arr2[+id[4]-1] = 1;
+
+                        if (swt == 1){
+                            xoro = "X";
+                            swt = 2;
+                        } else {
+                            xoro = "O";
+                            swt = 1;
+                        }
+
+                        switch (+id[4]){
+                            case 1:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[0][0] = xoro;
+                            }break;
+                            case 2:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[0][1] = xoro;
+                            }break;
+                            case 3:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[0][2] = xoro;
+                            }break;
+                            case 4:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[1][0] = xoro;
+                            }break;
+                            case 5:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[1][1] = xoro;
+                            }break;
+                            case 6:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[1][2] = xoro;
+                            }break;
+                            case 7:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[2][0] = xoro;
+                            }break;
+                            case 8:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[2][1] = xoro;
+                            }break;
+                            case 9:{
+                                document.getElementById(id).innerHTML = xoro;
+                                arr[2][2] = xoro;
+                            }break;
+                                     }
+
+                        var arr3 = [
+                                arr[0][0]+arr[0][1]+arr[0][2],
+                                arr[1][0]+arr[1][1]+arr[1][2],
+                                arr[2][0]+arr[2][1]+arr[2][2],
+                                arr[0][0]+arr[1][0]+arr[2][0],
+                                arr[0][1]+arr[1][1]+arr[2][1],
+                                arr[0][2]+arr[1][2]+arr[2][2],
+                                arr[0][0]+arr[1][1]+arr[2][2],
+                                arr[0][2]+arr[1][1]+arr[2][0]];
+
+                        gam++;
+
+                        for (var i = 0; i < 7; i++){
+                            if (arr3[i] == "XXX" || arr3[i] == "OOO"){
+                               alert("WIN! Player: '" + arr3[i][0]+"'" );
+                                break;
+                            } else if(gam == 9){
+                                alert("Draw!!!");
+                                break;
+                            }
+                        }
+                    } 
+
+
             }
+
+            
+            
+            
+          
+            
+//            document.getElementById('gameZone').onclick = function(){
+//                    document.addEventListener('click', function(e) {
+//                    var cord = document.elementFromPoint(e.clientX, e.clientY).id;
+//                    add(cord);
+//                }, false);
+//                
+//                function add(cord){
+//                    switch(jj){
+//                        case 1:{
+//                            document.getElementById(cord).innerHTML = "X";
+//                            jj++;
+//                        }break;
+//                        case 2:{
+//                            document.getElementById(cord).innerHTML = "O";
+//                            jj = 1;
+//                        }break;
+//                             }
+//                }
+//              
+//            }
+           
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
     
         }break;
         case 2:{
