@@ -101,7 +101,7 @@ play.onclick = function () {
                         case 4:;  
                         case 6:;  
                         case 8: TAR.innerHTML = "O"; ocher++; break;
-                        default: alert(ocher + "Error404");
+                        
                     }  
                 }
                 
